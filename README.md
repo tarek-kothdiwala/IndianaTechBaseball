@@ -26,13 +26,14 @@ This repository includes information on my Azure ASP.NET web app with SQL Databa
  - Why: 
  - Purpose: 
 ## Azure Well-Architected Framework
-### Reliability
+#### Reliability
 
-### Security
+#### Security
 
-### Cost Optimization
+#### Cost Optimization
 
-### Operational Excellence
+#### Operational Excellence
 
-### Performance Efficiency
+#### Performance Efficiency
 
+##Futute Revisions
