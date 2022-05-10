@@ -13,10 +13,10 @@ This repository includes information on my Azure ASP.NET web app with SQL Databa
 ![Diagram (Visio)](https://user-images.githubusercontent.com/103961256/167728461-bf570a23-5af2-4df6-9b69-ed65fa00e468.PNG)
 
 ## Services
-### Azure App Service
+#### Azure App Service
 
-### Azure Service Plan
+#### Azure Service Plan
 
-### Azure SQL Database
+#### Azure SQL Database
 
-### Azure SQL Server
+#### Azure SQL Server
