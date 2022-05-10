@@ -9,3 +9,4 @@ This repository includes information on my Azure ASP.NET web app with SQL Databa
 
 ## Diagram
  - I used Micrsoft Visio for a visual representation of this project to show how everything is connected to each other in my resource group. It includes dependancies, for example, the SQL Database is dependant on the SQL Server and the Web Application is hosted by the Web App Plan and how they are connected between each other through the connection string. 
+![Diagram (Visio)](https://user-images.githubusercontent.com/103961256/167728461-bf570a23-5af2-4df6-9b69-ed65fa00e468.PNG)
