@@ -25,3 +25,14 @@ This repository includes information on my Azure ASP.NET web app with SQL Databa
 #### Azure SQL Server
  - Why: 
  - Purpose: 
+## Azure Well-Architected Framework
+### Reliability
+
+### Security
+
+### Cost Optimization
+
+### Operational Excellence
+
+### Performance Efficiency
+
