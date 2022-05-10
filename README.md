@@ -14,9 +14,14 @@ This repository includes information on my Azure ASP.NET web app with SQL Databa
 
 ## Services
 #### Azure App Service
-
-#### Azure Service Plan
-
+ - Why: 
+ - Purpose: 
+#### Azure App Service Plan
+ - Why: 
+ - Purpose: 
 #### Azure SQL Database
-
+ - Why: 
+ - Purpose: 
 #### Azure SQL Server
+ - Why: 
+ - Purpose: 
