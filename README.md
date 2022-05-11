@@ -28,13 +28,16 @@ This repository includes information on my Azure ASP.NET web app with SQL Databa
 
 ## Azure Well-Architected Framework
 #### Reliability
-
+- My services are quite reliable since I have made many Geo-redundant services, which provide high availability and durability for hosting data and the application implemented. This ensures that it will be reliable even in the event of an outage, where data is synchronously replicated in the primary region and also asynchronously replicated to a secondary region that is far away. 
 #### Security
-
+- My services are quite secure since my SQL Database, Server, and connection string all have credentials to gain access to them. The web page is also quite secure since it is running on HTTPS (Hypertext Transfer Protocol Secure). This allows for a very protected and confiedntial user expereince when acessing the web app but also against those who intend to do malicious things. 
 #### Cost Optimization
-
+- I have managed my costs very effectively for the value being delivered. For my SQL Database/Server, I have an estimated monthly cost of $4.99/month using the Basic service tier due to the less demanding workload.  For my app service/app service plan, I am currently using the Free pricing tier, which allows for up to 1 GB memeory and 60 mins/day compute at no charge, which is great for the minimal workload on the web app service. 
 #### Operational Excellence
-
+- In terms of the operational excellence side of things, the services and processes I have implemented creates an envornment where the applications running remain in production. They are very reliable and predictable since it is using a simple two-tier model with not many moving parts. Nothing really slows down any of the processes with the resources I have deployed for this project. 
 #### Performance Efficiency
-
+ - The performance efficiency is great for the computing power that need to be done between the SQL side of things as well as the front-end web app service side. It takes very little computer power to run what I am running - mainly filling tables of data from different sources (web app and SQL Database). The entire project is quite efficient in its performance and has the ability to be edited or even torn down and republished perfectly at a moments notice. 
 ## Futute Revisions
+ - For the future revisions, I would add functionality to the add pitcher, edit, and delete buttons and brush up on my HTML codding experience by being able to have the public user-editable and writable data from the SQL database within the web app. If I had more time I would have experimented with this and did additonal research on how to make this work in order to update the back-end SQL database using the front-end web app like originally envisioned. 
+ - I would also like to make it more asthetically appealing by adding logos, sponsors, ads, etc. into the web page and not just have it entirelly a functional web page but more appealing and enjoyable to view for the user. 
+ - Additionally, to make the website more complete in nature, I would add a schedule that would also link to a SQL database with the entire season schedule with the ability to edit scores and results of games. 
