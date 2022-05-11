@@ -33,6 +33,8 @@ This repository includes information on my Azure ASP.NET web app with SQL Databa
 - My services are quite secure since my SQL Database, Server, and connection string all have credentials to gain access to them. The web page is also quite secure since it is running on HTTPS (Hypertext Transfer Protocol Secure). This allows for a very protected and confidential user experience when accessing the web app but also against those who intend to do malicious things. 
 #### Cost Optimization
 - I have managed my costs very effectively for the value being delivered. For my SQL Database/Server, I have an estimated monthly cost of $4.99/month using the Basic service tier due to the less demanding workload.  For my app service/app service plan, I am currently using the Free pricing tier, which allows for up to 1 GB of memory and 60 mins/day compute at no charge, which is great for the minimal workload on the web app service. 
+ - ![CC 8](https://user-images.githubusercontent.com/103961256/167781799-27a58cfa-30f3-4914-957c-c70928dc580a.PNG)
+
 #### Operational Excellence
 - In terms of the operational excellence side of things, the services and processes I have implemented creates an environment where the applications running remain in production. They are very reliable and predictable since it is using a simple two-tier model with not many moving parts. Nothing really slows down any of the processes with the resources I have deployed for this project. 
 #### Performance Efficiency
