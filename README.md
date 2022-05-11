@@ -28,7 +28,7 @@ This repository includes information on my Azure ASP.NET web app with SQL Databa
 
 ## Azure Well-Architected Framework
 #### Reliability
-- My services are quite reliable since I have made many Geo-redundant services, which provide high availability and durability for hosting data and the application implemented. This ensures that it will be reliable even in the event of an outage, where data is synchronously replicated in the primary region and also asynchronously replicated to a secondary region that is far away. 
+- My services are quite reliable since I have made many Geo-redundant services (SQL Database/Server), which provide high availability and durability for hosting data and the application implemented. This ensures that it will be reliable even in the event of an outage, where data is synchronously replicated in the primary region and also asynchronously replicated to a secondary region that is far away.
 #### Security
 - My services are quite secure since my SQL Database, Server, and connection string all have credentials to gain access to them. The web page is also quite secure since it is running on HTTPS (Hypertext Transfer Protocol Secure). This allows for a very protected and confidential user experience when accessing the web app but also against those who intend to do malicious things. Additionally, the server firewall only accepts client IP addresses. 
 #### Cost Optimization
