@@ -20,7 +20,7 @@ This repository includes information on my Azure ASP.NET web app with SQL Databa
  - Why: The app service plan is created for the web app to run since it defines computer resources for it.
  - Purpose: The purpose of the app service plan is to define the operating system, region, pricing tier, etc. Basically, the app service plan determines my features of my app service and how much to pay for those features I have chosen. 
 #### Azure SQL Database
- - Why: The SQL database is a relational database service to hold tables, data, and ultimetely pull queries. 
+ - Why: The SQL database is a relational database service to hold tables, data, and ultimately pull queries. 
  - Purpose: The purpose of the SQL database is to be able to pull the query defined to the web app for users to see and then be able to add data, edit, and delete the data as they, so please. Data can be added from both front-end (by the public user) and back-end (by an admin - like me). Main purpose of accessing, updating, and maintaining data. 
 #### Azure SQL Server
  - Why: The SQL server is the SQL databases' management system to support the many analytics, transaction, and business intelligence operations behind the scenes. 
