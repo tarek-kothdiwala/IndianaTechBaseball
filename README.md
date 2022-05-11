@@ -13,7 +13,7 @@ This repository includes information on my Azure ASP.NET web app with SQL Databa
 ![Diagram (Visio)](https://user-images.githubusercontent.com/103961256/167728461-bf570a23-5af2-4df6-9b69-ed65fa00e468.PNG)
 
 ## Services
-#### Azure App Service
+#### Azure Web App Service
  - Why: I Used an app service for its ease of use in hosting my website that is publicly accessible. It is able to manage multiple different frameworks and different programming languages (used mainly HTML and C# for mine). 
  - Purpose: The purpose for my app service was to be able to allow anyone to access the Indiana Tech 2022 Baseball statistics easily in a very user friendly way, and the app service, with its built-in frameworks, allowed for ease of publishing to the web what I intended. 
 #### Azure App Service Plan
