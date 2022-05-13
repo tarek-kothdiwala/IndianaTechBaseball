@@ -1,0 +1,46 @@
+﻿@page
+@model PrivacyModel
+@{
+    ViewData["Title"] = "Pitching Statistics";
+}
+
+<br />
+    <center><h1 class="display-4">Indiana Tech Baseball - Pitching</h1></center>
+        <center><i><h6>Table made from SQL Database in ASP.NET Web App | By: Tarek Kothdiwala</h6></i></center>
+<a class='btn-primary btn-sm' href='/Privacy/Create'>Add Pitcher</a>
+<table class="table">
+    <thead>
+        <tr>
+            <th>ID</th>
+            <th>Player Name</th>
+            <th>Earned Run Average</th>
+            <th>Innings Pitched</th>
+            <th>Hits</th>
+            <th>Runs</th>
+            <th>Earned Runs</th>
+            <th>Base on Balls</th>
+            <th>Strikeouts</th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var client in Model.listClients)
+{
+        <tr>
+           <td>@client.id</td>
+           <td>@client.player</td>
+           <td>@client.era</td>
+           <td>@client.ip</td>
+           <td>@client.h</td>
+           <td>@client.r</td>
+           <td>@client.er</td>
+           <td>@client.bb</td>
+           <td>@client.so</td>
+           <td>
+               <a class='btn-primary btn-sm' href="/Privacy/Edit?id=@client.id">Edit</a>
+               <a class='btn-danger btn-sm' href="/Privacy/Delete?id=@client.id">Delete</a>
+           </td>
+        </tr>
+}
+    </tbody>
+
+</table>

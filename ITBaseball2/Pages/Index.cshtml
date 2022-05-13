@@ -1,0 +1,684 @@
+﻿@page
+@model IndexModel
+@{
+    ViewData["Title"] = "Hitting Statistics";
+}
+
+
+<div class="text-center">
+    <h1 class="display-4">Indiana Tech Baseball - Hitting</h1>
+        <center><i><h6>Table made in ASP.NET Web App | By: Tarek Kothdiwala</h6></i></center>
+
+<br />
+<br />
+
+<style type="text/css">
+.tg  {border-collapse:collapse;border-spacing:0;}
+.tg td{border-color:black;border-style:solid;border-width:1px;font-family:Arial, sans-serif;font-size:14px;
+  overflow:hidden;padding:10px 5px;word-break:normal;}
+.tg th{border-color:black;border-style:solid;border-width:1px;font-family:Arial, sans-serif;font-size:14px;
+  font-weight:normal;overflow:hidden;padding:10px 5px;word-break:normal;}
+.tg .tg-q1rv{background-color:#ff8100;text-align:left;vertical-align:top}
+.tg .tg-0lax{text-align:left;vertical-align:top}
+</style>
+<center>
+<table class="tg">
+<thead>
+  <tr>
+    <th class="tg-q1rv"><span style="font-weight:bold;font-style:italic;color:#171718">#</span></th>
+    <th class="tg-q1rv"><span style="font-weight:bold;font-style:italic;color:#171718">Player</span></th>
+    <th class="tg-q1rv"><span style="font-weight:bold;font-style:italic;color:#171718">AVG</span></th>
+    <th class="tg-q1rv"><span style="font-weight:bold;font-style:italic;color:#171718">OPS</span></th>
+    <th class="tg-q1rv"><span style="font-weight:bold;font-style:italic;color:#171718">GP-GS</span></th>
+    <th class="tg-q1rv"><span style="font-weight:bold;font-style:italic;color:#171718">AB</span></th>
+    <th class="tg-q1rv"><span style="font-weight:bold;font-style:italic;color:#171718">R</span></th>
+    <th class="tg-q1rv"><span style="font-weight:bold;font-style:italic;color:#171718">H</span></th>
+    <th class="tg-q1rv"><span style="font-weight:bold;font-style:italic;color:#171718">2B</span></th>
+    <th class="tg-q1rv"><span style="font-weight:bold;font-style:italic;color:#171718">3B</span></th>
+    <th class="tg-q1rv"><span style="font-weight:bold;font-style:italic;color:#171718">HR</span></th>
+    <th class="tg-q1rv"><span style="font-weight:bold;font-style:italic;color:#171718">RBI</span></th>
+    <th class="tg-q1rv"><span style="font-weight:bold;font-style:italic;color:#171718">TB</span></th>
+    <th class="tg-q1rv"><span style="font-weight:bold;font-style:italic;color:#171718">SLG%</span></th>
+    <th class="tg-q1rv"><span style="font-weight:bold;font-style:italic;color:#171718">BB</span></th>
+    <th class="tg-q1rv"><span style="font-weight:bold;font-style:italic;color:#171718">HBP</span></th>
+    <th class="tg-q1rv"><span style="font-weight:bold;font-style:italic;color:#171718">SO</span></th>
+    <th class="tg-q1rv"><span style="font-weight:bold;font-style:italic;color:#171718">GDP</span></th>
+    <th class="tg-q1rv"><span style="font-weight:bold;font-style:italic;color:#171718">OB%</span></th>
+    <th class="tg-q1rv"><span style="font-weight:bold;font-style:italic;color:#171718">SF</span></th>
+    <th class="tg-q1rv"><span style="font-weight:bold;font-style:italic;color:#171718">SH</span></th>
+    <th class="tg-q1rv"><span style="font-weight:bold;font-style:italic;color:#171718">SB-ATT</span></th>
+  </tr>
+</thead>
+<tbody>
+  <tr>
+    <td class="tg-0lax"><span style="color:#494949">18</span></td>
+    <td class="tg-0lax"><span style="font-weight:bold;text-decoration:underline;color:#171718">Stahl, Tyler</span></td>
+    <td class="tg-0lax"><span style="color:#494949">.364</span></td>
+    <td class="tg-0lax"><span style="color:#494949">1.055</span></td>
+    <td class="tg-0lax"><span style="color:#494949">40-31</span></td>
+    <td class="tg-0lax"><span style="color:#494949">107</span></td>
+    <td class="tg-0lax"><span style="color:#494949">30</span></td>
+    <td class="tg-0lax"><span style="color:#494949">39</span></td>
+    <td class="tg-0lax"><span style="color:#494949">9</span></td>
+    <td class="tg-0lax"><span style="color:#494949">3</span></td>
+    <td class="tg-0lax"><span style="color:#494949">4</span></td>
+    <td class="tg-0lax"><span style="color:#494949">33</span></td>
+    <td class="tg-0lax"><span style="color:#494949">66</span></td>
+    <td class="tg-0lax"><span style="color:#494949">.617</span></td>
+    <td class="tg-0lax"><span style="color:#494949">15</span></td>
+    <td class="tg-0lax"><span style="color:#494949">3</span></td>
+    <td class="tg-0lax"><span style="color:#494949">25</span></td>
+    <td class="tg-0lax"><span style="color:#494949">1</span></td>
+    <td class="tg-0lax"><span style="color:#494949">.438</span></td>
+    <td class="tg-0lax"><span style="color:#494949">5</span></td>
+    <td class="tg-0lax"><span style="color:#494949">1</span></td>
+    <td class="tg-0lax"><span style="color:#494949">7-9</span></td>
+  </tr>
+  <tr>
+    <td class="tg-0lax"><span style="color:#494949">5</span></td>
+    <td class="tg-0lax"><span style="font-weight:bold;text-decoration:underline;color:#171718">Moxey, Ashtin</span></td>
+    <td class="tg-0lax"><span style="color:#494949">.346</span></td>
+    <td class="tg-0lax"><span style="color:#494949">.979</span></td>
+    <td class="tg-0lax"><span style="color:#494949">48-48</span></td>
+    <td class="tg-0lax"><span style="color:#494949">159</span></td>
+    <td class="tg-0lax"><span style="color:#494949">35</span></td>
+    <td class="tg-0lax"><span style="color:#494949">55</span></td>
+    <td class="tg-0lax"><span style="color:#494949">12</span></td>
+    <td class="tg-0lax"><span style="color:#494949">0</span></td>
+    <td class="tg-0lax"><span style="color:#494949">8</span></td>
+    <td class="tg-0lax"><span style="color:#494949">36</span></td>
+    <td class="tg-0lax"><span style="color:#494949">91</span></td>
+    <td class="tg-0lax"><span style="color:#494949">.572</span></td>
+    <td class="tg-0lax"><span style="color:#494949">13</span></td>
+    <td class="tg-0lax"><span style="color:#494949">4</span></td>
+    <td class="tg-0lax"><span style="color:#494949">52</span></td>
+    <td class="tg-0lax"><span style="color:#494949">2</span></td>
+    <td class="tg-0lax"><span style="color:#494949">.407</span></td>
+    <td class="tg-0lax"><span style="color:#494949">1</span></td>
+    <td class="tg-0lax"><span style="color:#494949">2</span></td>
+    <td class="tg-0lax"><span style="color:#494949">7-10</span></td>
+  </tr>
+  <tr>
+    <td class="tg-0lax"><span style="color:#494949">2</span></td>
+    <td class="tg-0lax"><span style="font-weight:bold;text-decoration:underline;color:#171718">Reed, Jayden</span></td>
+    <td class="tg-0lax"><span style="color:#494949">.336</span></td>
+    <td class="tg-0lax"><span style="color:#494949">.880</span></td>
+    <td class="tg-0lax"><span style="color:#494949">48-47</span></td>
+    <td class="tg-0lax"><span style="color:#494949">149</span></td>
+    <td class="tg-0lax"><span style="color:#494949">39</span></td>
+    <td class="tg-0lax"><span style="color:#494949">50</span></td>
+    <td class="tg-0lax"><span style="color:#494949">9</span></td>
+    <td class="tg-0lax"><span style="color:#494949">4</span></td>
+    <td class="tg-0lax"><span style="color:#494949">1</span></td>
+    <td class="tg-0lax"><span style="color:#494949">27</span></td>
+    <td class="tg-0lax"><span style="color:#494949">70</span></td>
+    <td class="tg-0lax"><span style="color:#494949">.470</span></td>
+    <td class="tg-0lax"><span style="color:#494949">14</span></td>
+    <td class="tg-0lax"><span style="color:#494949">7</span></td>
+    <td class="tg-0lax"><span style="color:#494949">16</span></td>
+    <td class="tg-0lax"><span style="color:#494949">3</span></td>
+    <td class="tg-0lax"><span style="color:#494949">.410</span></td>
+    <td class="tg-0lax"><span style="color:#494949">3</span></td>
+    <td class="tg-0lax"><span style="color:#494949">6</span></td>
+    <td class="tg-0lax"><span style="color:#494949">8-11</span></td>
+  </tr>
+  <tr>
+    <td class="tg-0lax"><span style="color:#494949">22</span></td>
+    <td class="tg-0lax"><span style="font-weight:bold;text-decoration:underline;color:#171718">Stultz, Brice</span></td>
+    <td class="tg-0lax"><span style="color:#494949">.324</span></td>
+    <td class="tg-0lax"><span style="color:#494949">.893</span></td>
+    <td class="tg-0lax"><span style="color:#494949">48-45</span></td>
+    <td class="tg-0lax"><span style="color:#494949">136</span></td>
+    <td class="tg-0lax"><span style="color:#494949">28</span></td>
+    <td class="tg-0lax"><span style="color:#494949">44</span></td>
+    <td class="tg-0lax"><span style="color:#494949">12</span></td>
+    <td class="tg-0lax"><span style="color:#494949">1</span></td>
+    <td class="tg-0lax"><span style="color:#494949">3</span></td>
+    <td class="tg-0lax"><span style="color:#494949">32</span></td>
+    <td class="tg-0lax"><span style="color:#494949">67</span></td>
+    <td class="tg-0lax"><span style="color:#494949">.493</span></td>
+    <td class="tg-0lax"><span style="color:#494949">13</span></td>
+    <td class="tg-0lax"><span style="color:#494949">5</span></td>
+    <td class="tg-0lax"><span style="color:#494949">34</span></td>
+    <td class="tg-0lax"><span style="color:#494949">1</span></td>
+    <td class="tg-0lax"><span style="color:#494949">.400</span></td>
+    <td class="tg-0lax"><span style="color:#494949">1</span></td>
+    <td class="tg-0lax"><span style="color:#494949">4</span></td>
+    <td class="tg-0lax"><span style="color:#494949">3-3</span></td>
+  </tr>
+  <tr>
+    <td class="tg-0lax"><span style="color:#494949">14</span></td>
+    <td class="tg-0lax"><span style="font-weight:bold;text-decoration:underline;color:#171718">Daftari, Jacob</span></td>
+    <td class="tg-0lax"><span style="color:#494949">.309</span></td>
+    <td class="tg-0lax"><span style="color:#494949">.929</span></td>
+    <td class="tg-0lax"><span style="color:#494949">47-46</span></td>
+    <td class="tg-0lax"><span style="color:#494949">139</span></td>
+    <td class="tg-0lax"><span style="color:#494949">35</span></td>
+    <td class="tg-0lax"><span style="color:#494949">43</span></td>
+    <td class="tg-0lax"><span style="color:#494949">8</span></td>
+    <td class="tg-0lax"><span style="color:#494949">0</span></td>
+    <td class="tg-0lax"><span style="color:#494949">6</span></td>
+    <td class="tg-0lax"><span style="color:#494949">39</span></td>
+    <td class="tg-0lax"><span style="color:#494949">69</span></td>
+    <td class="tg-0lax"><span style="color:#494949">.496</span></td>
+    <td class="tg-0lax"><span style="color:#494949">20</span></td>
+    <td class="tg-0lax"><span style="color:#494949">14</span></td>
+    <td class="tg-0lax"><span style="color:#494949">28</span></td>
+    <td class="tg-0lax"><span style="color:#494949">3</span></td>
+    <td class="tg-0lax"><span style="color:#494949">.433</span></td>
+    <td class="tg-0lax"><span style="color:#494949">5</span></td>
+    <td class="tg-0lax"><span style="color:#494949">6</span></td>
+    <td class="tg-0lax"><span style="color:#494949">1-2</span></td>
+  </tr>
+  <tr>
+    <td class="tg-0lax"><span style="color:#494949">11</span></td>
+    <td class="tg-0lax"><span style="font-weight:bold;text-decoration:underline;color:#171718">Ascanio, Manuel</span></td>
+    <td class="tg-0lax"><span style="color:#494949">.305</span></td>
+    <td class="tg-0lax"><span style="color:#494949">.803</span></td>
+    <td class="tg-0lax"><span style="color:#494949">42-40</span></td>
+    <td class="tg-0lax"><span style="color:#494949">141</span></td>
+    <td class="tg-0lax"><span style="color:#494949">8</span></td>
+    <td class="tg-0lax"><span style="color:#494949">43</span></td>
+    <td class="tg-0lax"><span style="color:#494949">11</span></td>
+    <td class="tg-0lax"><span style="color:#494949">1</span></td>
+    <td class="tg-0lax"><span style="color:#494949">3</span></td>
+    <td class="tg-0lax"><span style="color:#494949">20</span></td>
+    <td class="tg-0lax"><span style="color:#494949">65</span></td>
+    <td class="tg-0lax"><span style="color:#494949">.461</span></td>
+    <td class="tg-0lax"><span style="color:#494949">8</span></td>
+    <td class="tg-0lax"><span style="color:#494949">1</span></td>
+    <td class="tg-0lax"><span style="color:#494949">12</span></td>
+    <td class="tg-0lax"><span style="color:#494949">1</span></td>
+    <td class="tg-0lax"><span style="color:#494949">.342</span></td>
+    <td class="tg-0lax"><span style="color:#494949">2</span></td>
+    <td class="tg-0lax"><span style="color:#494949">1</span></td>
+    <td class="tg-0lax"><span style="color:#494949">2-3</span></td>
+  </tr>
+  <tr>
+    <td class="tg-0lax"><span style="color:#494949">20</span></td>
+    <td class="tg-0lax"><span style="font-weight:bold;text-decoration:underline;color:#171718">Osika, Tristan</span></td>
+    <td class="tg-0lax"><span style="color:#494949">.298</span></td>
+    <td class="tg-0lax"><span style="color:#494949">.836</span></td>
+    <td class="tg-0lax"><span style="color:#494949">44-43</span></td>
+    <td class="tg-0lax"><span style="color:#494949">131</span></td>
+    <td class="tg-0lax"><span style="color:#494949">18</span></td>
+    <td class="tg-0lax"><span style="color:#494949">39</span></td>
+    <td class="tg-0lax"><span style="color:#494949">9</span></td>
+    <td class="tg-0lax"><span style="color:#494949">1</span></td>
+    <td class="tg-0lax"><span style="color:#494949">3</span></td>
+    <td class="tg-0lax"><span style="color:#494949">23</span></td>
+    <td class="tg-0lax"><span style="color:#494949">59</span></td>
+    <td class="tg-0lax"><span style="color:#494949">.450</span></td>
+    <td class="tg-0lax"><span style="color:#494949">18</span></td>
+    <td class="tg-0lax"><span style="color:#494949">2</span></td>
+    <td class="tg-0lax"><span style="color:#494949">29</span></td>
+    <td class="tg-0lax"><span style="color:#494949">1</span></td>
+    <td class="tg-0lax"><span style="color:#494949">.386</span></td>
+    <td class="tg-0lax"><span style="color:#494949">2</span></td>
+    <td class="tg-0lax"><span style="color:#494949">4</span></td>
+    <td class="tg-0lax"><span style="color:#494949">1-3</span></td>
+  </tr>
+  <tr>
+    <td class="tg-0lax"><span style="color:#494949">21</span></td>
+    <td class="tg-0lax"><span style="font-weight:bold;text-decoration:underline;color:#171718">Patterson, Trevor</span></td>
+    <td class="tg-0lax"><span style="color:#494949">.294</span></td>
+    <td class="tg-0lax"><span style="color:#494949">.931</span></td>
+    <td class="tg-0lax"><span style="color:#494949">44-36</span></td>
+    <td class="tg-0lax"><span style="color:#494949">109</span></td>
+    <td class="tg-0lax"><span style="color:#494949">42</span></td>
+    <td class="tg-0lax"><span style="color:#494949">32</span></td>
+    <td class="tg-0lax"><span style="color:#494949">8</span></td>
+    <td class="tg-0lax"><span style="color:#494949">3</span></td>
+    <td class="tg-0lax"><span style="color:#494949">0</span></td>
+    <td class="tg-0lax"><span style="color:#494949">15</span></td>
+    <td class="tg-0lax"><span style="color:#494949">46</span></td>
+    <td class="tg-0lax"><span style="color:#494949">.422</span></td>
+    <td class="tg-0lax"><span style="color:#494949">32</span></td>
+    <td class="tg-0lax"><span style="color:#494949">17</span></td>
+    <td class="tg-0lax"><span style="color:#494949">33</span></td>
+    <td class="tg-0lax"><span style="color:#494949">0</span></td>
+    <td class="tg-0lax"><span style="color:#494949">.509</span></td>
+    <td class="tg-0lax"><span style="color:#494949">1</span></td>
+    <td class="tg-0lax"><span style="color:#494949">7</span></td>
+    <td class="tg-0lax"><span style="color:#494949">6-7</span></td>
+  </tr>
+  <tr>
+    <td class="tg-0lax"><span style="color:#494949">49</span></td>
+    <td class="tg-0lax"><span style="font-weight:bold;text-decoration:underline;color:#171718">Mitchell, Alex</span></td>
+    <td class="tg-0lax"><span style="color:#494949">1.000</span></td>
+    <td class="tg-0lax"><span style="color:#494949">2.000</span></td>
+    <td class="tg-0lax"><span style="color:#494949">1-0</span></td>
+    <td class="tg-0lax"><span style="color:#494949">1</span></td>
+    <td class="tg-0lax"><span style="color:#494949">0</span></td>
+    <td class="tg-0lax"><span style="color:#494949">1</span></td>
+    <td class="tg-0lax"><span style="color:#494949">0</span></td>
+    <td class="tg-0lax"><span style="color:#494949">0</span></td>
+    <td class="tg-0lax"><span style="color:#494949">0</span></td>
+    <td class="tg-0lax"><span style="color:#494949">0</span></td>
+    <td class="tg-0lax"><span style="color:#494949">1</span></td>
+    <td class="tg-0lax"><span style="color:#494949">1.000</span></td>
+    <td class="tg-0lax"><span style="color:#494949">0</span></td>
+    <td class="tg-0lax"><span style="color:#494949">0</span></td>
+    <td class="tg-0lax"><span style="color:#494949">0</span></td>
+    <td class="tg-0lax"><span style="color:#494949">0</span></td>
+    <td class="tg-0lax"><span style="color:#494949">1.000</span></td>
+    <td class="tg-0lax"><span style="color:#494949">0</span></td>
+    <td class="tg-0lax"><span style="color:#494949">0</span></td>
+    <td class="tg-0lax"><span style="color:#494949">0-0</span></td>
+  </tr>
+  <tr>
+    <td class="tg-0lax"><span style="color:#494949">99</span></td>
+    <td class="tg-0lax"><span style="font-weight:bold;text-decoration:underline;color:#171718">Mitchell, Austin</span></td>
+    <td class="tg-0lax"><span style="color:#494949">.500</span></td>
+    <td class="tg-0lax"><span style="color:#494949">1.000</span></td>
+    <td class="tg-0lax"><span style="color:#494949">3-0</span></td>
+    <td class="tg-0lax"><span style="color:#494949">2</span></td>
+    <td class="tg-0lax"><span style="color:#494949">2</span></td>
+    <td class="tg-0lax"><span style="color:#494949">1</span></td>
+    <td class="tg-0lax"><span style="color:#494949">0</span></td>
+    <td class="tg-0lax"><span style="color:#494949">0</span></td>
+    <td class="tg-0lax"><span style="color:#494949">0</span></td>
+    <td class="tg-0lax"><span style="color:#494949">1</span></td>
+    <td class="tg-0lax"><span style="color:#494949">1</span></td>
+    <td class="tg-0lax"><span style="color:#494949">.500</span></td>
+    <td class="tg-0lax"><span style="color:#494949">0</span></td>
+    <td class="tg-0lax"><span style="color:#494949">0</span></td>
+    <td class="tg-0lax"><span style="color:#494949">1</span></td>
+    <td class="tg-0lax"><span style="color:#494949">0</span></td>
+    <td class="tg-0lax"><span style="color:#494949">.500</span></td>
+    <td class="tg-0lax"><span style="color:#494949">0</span></td>
+    <td class="tg-0lax"><span style="color:#494949">0</span></td>
+    <td class="tg-0lax"><span style="color:#494949">0-0</span></td>
+  </tr>
+  <tr>
+    <td class="tg-0lax"><span style="color:#494949">8</span></td>
+    <td class="tg-0lax"><span style="font-weight:bold;text-decoration:underline;color:#171718">Busick, Aron</span></td>
+    <td class="tg-0lax"><span style="color:#494949">.417</span></td>
+    <td class="tg-0lax"><span style="color:#494949">1.333</span></td>
+    <td class="tg-0lax"><span style="color:#494949">37-1</span></td>
+    <td class="tg-0lax"><span style="color:#494949">12</span></td>
+    <td class="tg-0lax"><span style="color:#494949">29</span></td>
+    <td class="tg-0lax"><span style="color:#494949">5</span></td>
+    <td class="tg-0lax"><span style="color:#494949">2</span></td>
+    <td class="tg-0lax"><span style="color:#494949">0</span></td>
+    <td class="tg-0lax"><span style="color:#494949">1</span></td>
+    <td class="tg-0lax"><span style="color:#494949">4</span></td>
+    <td class="tg-0lax"><span style="color:#494949">10</span></td>
+    <td class="tg-0lax"><span style="color:#494949">.833</span></td>
+    <td class="tg-0lax"><span style="color:#494949">0</span></td>
+    <td class="tg-0lax"><span style="color:#494949">2</span></td>
+    <td class="tg-0lax"><span style="color:#494949">4</span></td>
+    <td class="tg-0lax"><span style="color:#494949">0</span></td>
+    <td class="tg-0lax"><span style="color:#494949">.500</span></td>
+    <td class="tg-0lax"><span style="color:#494949">0</span></td>
+    <td class="tg-0lax"><span style="color:#494949">0</span></td>
+    <td class="tg-0lax"><span style="color:#494949">5-6</span></td>
+  </tr>
+  <tr>
+    <td class="tg-0lax"><span style="color:#494949">32</span></td>
+    <td class="tg-0lax"><span style="font-weight:bold;text-decoration:underline;color:#171718">Gudakunst, Damien</span></td>
+    <td class="tg-0lax"><span style="color:#494949">.375</span></td>
+    <td class="tg-0lax"><span style="color:#494949">.819</span></td>
+    <td class="tg-0lax"><span style="color:#494949">20-0</span></td>
+    <td class="tg-0lax"><span style="color:#494949">8</span></td>
+    <td class="tg-0lax"><span style="color:#494949">9</span></td>
+    <td class="tg-0lax"><span style="color:#494949">3</span></td>
+    <td class="tg-0lax"><span style="color:#494949">0</span></td>
+    <td class="tg-0lax"><span style="color:#494949">0</span></td>
+    <td class="tg-0lax"><span style="color:#494949">0</span></td>
+    <td class="tg-0lax"><span style="color:#494949">0</span></td>
+    <td class="tg-0lax"><span style="color:#494949">3</span></td>
+    <td class="tg-0lax"><span style="color:#494949">.375</span></td>
+    <td class="tg-0lax"><span style="color:#494949">1</span></td>
+    <td class="tg-0lax"><span style="color:#494949">0</span></td>
+    <td class="tg-0lax"><span style="color:#494949">0</span></td>
+    <td class="tg-0lax"><span style="color:#494949">0</span></td>
+    <td class="tg-0lax"><span style="color:#494949">.444</span></td>
+    <td class="tg-0lax"><span style="color:#494949">0</span></td>
+    <td class="tg-0lax"><span style="color:#494949">0</span></td>
+    <td class="tg-0lax"><span style="color:#494949">1-2</span></td>
+  </tr>
+  <tr>
+    <td class="tg-0lax"><span style="color:#494949">6</span></td>
+    <td class="tg-0lax"><span style="font-weight:bold;text-decoration:underline;color:#171718">Snyder, Mike</span></td>
+    <td class="tg-0lax"><span style="color:#494949">.315</span></td>
+    <td class="tg-0lax"><span style="color:#494949">.899</span></td>
+    <td class="tg-0lax"><span style="color:#494949">37-32</span></td>
+    <td class="tg-0lax"><span style="color:#494949">127</span></td>
+    <td class="tg-0lax"><span style="color:#494949">26</span></td>
+    <td class="tg-0lax"><span style="color:#494949">40</span></td>
+    <td class="tg-0lax"><span style="color:#494949">7</span></td>
+    <td class="tg-0lax"><span style="color:#494949">2</span></td>
+    <td class="tg-0lax"><span style="color:#494949">5</span></td>
+    <td class="tg-0lax"><span style="color:#494949">28</span></td>
+    <td class="tg-0lax"><span style="color:#494949">66</span></td>
+    <td class="tg-0lax"><span style="color:#494949">.520</span></td>
+    <td class="tg-0lax"><span style="color:#494949">9</span></td>
+    <td class="tg-0lax"><span style="color:#494949">4</span></td>
+    <td class="tg-0lax"><span style="color:#494949">33</span></td>
+    <td class="tg-0lax"><span style="color:#494949">2</span></td>
+    <td class="tg-0lax"><span style="color:#494949">.379</span></td>
+    <td class="tg-0lax"><span style="color:#494949">0</span></td>
+    <td class="tg-0lax"><span style="color:#494949">0</span></td>
+    <td class="tg-0lax"><span style="color:#494949">7-9</span></td>
+  </tr>
+  <tr>
+    <td class="tg-0lax"><span style="color:#494949">4</span></td>
+    <td class="tg-0lax"><span style="font-weight:bold;text-decoration:underline;color:#171718">Lewis, Clay</span></td>
+    <td class="tg-0lax"><span style="color:#494949">.300</span></td>
+    <td class="tg-0lax"><span style="color:#494949">.741</span></td>
+    <td class="tg-0lax"><span style="color:#494949">13-4</span></td>
+    <td class="tg-0lax"><span style="color:#494949">20</span></td>
+    <td class="tg-0lax"><span style="color:#494949">3</span></td>
+    <td class="tg-0lax"><span style="color:#494949">6</span></td>
+    <td class="tg-0lax"><span style="color:#494949">1</span></td>
+    <td class="tg-0lax"><span style="color:#494949">0</span></td>
+    <td class="tg-0lax"><span style="color:#494949">0</span></td>
+    <td class="tg-0lax"><span style="color:#494949">1</span></td>
+    <td class="tg-0lax"><span style="color:#494949">7</span></td>
+    <td class="tg-0lax"><span style="color:#494949">.350</span></td>
+    <td class="tg-0lax"><span style="color:#494949">3</span></td>
+    <td class="tg-0lax"><span style="color:#494949">0</span></td>
+    <td class="tg-0lax"><span style="color:#494949">3</span></td>
+    <td class="tg-0lax"><span style="color:#494949">0</span></td>
+    <td class="tg-0lax"><span style="color:#494949">.391</span></td>
+    <td class="tg-0lax"><span style="color:#494949">0</span></td>
+    <td class="tg-0lax"><span style="color:#494949">2</span></td>
+    <td class="tg-0lax"><span style="color:#494949">0-0</span></td>
+  </tr>
+  <tr>
+    <td class="tg-0lax"><span style="color:#494949">9</span></td>
+    <td class="tg-0lax"><span style="font-weight:bold;text-decoration:underline;color:#171718">McGinn, Patrick</span></td>
+    <td class="tg-0lax"><span style="color:#494949">.289</span></td>
+    <td class="tg-0lax"><span style="color:#494949">.814</span></td>
+    <td class="tg-0lax"><span style="color:#494949">32-10</span></td>
+    <td class="tg-0lax"><span style="color:#494949">45</span></td>
+    <td class="tg-0lax"><span style="color:#494949">17</span></td>
+    <td class="tg-0lax"><span style="color:#494949">13</span></td>
+    <td class="tg-0lax"><span style="color:#494949">3</span></td>
+    <td class="tg-0lax"><span style="color:#494949">0</span></td>
+    <td class="tg-0lax"><span style="color:#494949">0</span></td>
+    <td class="tg-0lax"><span style="color:#494949">9</span></td>
+    <td class="tg-0lax"><span style="color:#494949">16</span></td>
+    <td class="tg-0lax"><span style="color:#494949">.356</span></td>
+    <td class="tg-0lax"><span style="color:#494949">12</span></td>
+    <td class="tg-0lax"><span style="color:#494949">2</span></td>
+    <td class="tg-0lax"><span style="color:#494949">10</span></td>
+    <td class="tg-0lax"><span style="color:#494949">0</span></td>
+    <td class="tg-0lax"><span style="color:#494949">.458</span></td>
+    <td class="tg-0lax"><span style="color:#494949">0</span></td>
+    <td class="tg-0lax"><span style="color:#494949">5</span></td>
+    <td class="tg-0lax"><span style="color:#494949">5-5</span></td>
+  </tr>
+  <tr>
+    <td class="tg-0lax"><span style="color:#494949">17</span></td>
+    <td class="tg-0lax"><span style="font-weight:bold;text-decoration:underline;color:#171718">Mojica, Christian</span></td>
+    <td class="tg-0lax"><span style="color:#494949">.286</span></td>
+    <td class="tg-0lax"><span style="color:#494949">.863</span></td>
+    <td class="tg-0lax"><span style="color:#494949">28-9</span></td>
+    <td class="tg-0lax"><span style="color:#494949">42</span></td>
+    <td class="tg-0lax"><span style="color:#494949">7</span></td>
+    <td class="tg-0lax"><span style="color:#494949">12</span></td>
+    <td class="tg-0lax"><span style="color:#494949">6</span></td>
+    <td class="tg-0lax"><span style="color:#494949">0</span></td>
+    <td class="tg-0lax"><span style="color:#494949">0</span></td>
+    <td class="tg-0lax"><span style="color:#494949">10</span></td>
+    <td class="tg-0lax"><span style="color:#494949">18</span></td>
+    <td class="tg-0lax"><span style="color:#494949">.429</span></td>
+    <td class="tg-0lax"><span style="color:#494949">7</span></td>
+    <td class="tg-0lax"><span style="color:#494949">4</span></td>
+    <td class="tg-0lax"><span style="color:#494949">6</span></td>
+    <td class="tg-0lax"><span style="color:#494949">1</span></td>
+    <td class="tg-0lax"><span style="color:#494949">.434</span></td>
+    <td class="tg-0lax"><span style="color:#494949">0</span></td>
+    <td class="tg-0lax"><span style="color:#494949">0</span></td>
+    <td class="tg-0lax"><span style="color:#494949">0-0</span></td>
+  </tr>
+  <tr>
+    <td class="tg-0lax"><span style="color:#494949">7</span></td>
+    <td class="tg-0lax"><span style="font-weight:bold;text-decoration:underline;color:#171718">Bates, Parker</span></td>
+    <td class="tg-0lax"><span style="color:#494949">.267</span></td>
+    <td class="tg-0lax"><span style="color:#494949">.802</span></td>
+    <td class="tg-0lax"><span style="color:#494949">32-23</span></td>
+    <td class="tg-0lax"><span style="color:#494949">75</span></td>
+    <td class="tg-0lax"><span style="color:#494949">16</span></td>
+    <td class="tg-0lax"><span style="color:#494949">20</span></td>
+    <td class="tg-0lax"><span style="color:#494949">4</span></td>
+    <td class="tg-0lax"><span style="color:#494949">2</span></td>
+    <td class="tg-0lax"><span style="color:#494949">1</span></td>
+    <td class="tg-0lax"><span style="color:#494949">8</span></td>
+    <td class="tg-0lax"><span style="color:#494949">31</span></td>
+    <td class="tg-0lax"><span style="color:#494949">.413</span></td>
+    <td class="tg-0lax"><span style="color:#494949">9</span></td>
+    <td class="tg-0lax"><span style="color:#494949">6</span></td>
+    <td class="tg-0lax"><span style="color:#494949">20</span></td>
+    <td class="tg-0lax"><span style="color:#494949">2</span></td>
+    <td class="tg-0lax"><span style="color:#494949">.389</span></td>
+    <td class="tg-0lax"><span style="color:#494949">0</span></td>
+    <td class="tg-0lax"><span style="color:#494949">1</span></td>
+    <td class="tg-0lax"><span style="color:#494949">2-4</span></td>
+  </tr>
+  <tr>
+    <td class="tg-0lax"><span style="color:#494949">28</span></td>
+    <td class="tg-0lax"><span style="font-weight:bold;text-decoration:underline;color:#171718">Diaz, Luis</span></td>
+    <td class="tg-0lax"><span style="color:#494949">.246</span></td>
+    <td class="tg-0lax"><span style="color:#494949">.867</span></td>
+    <td class="tg-0lax"><span style="color:#494949">26-17</span></td>
+    <td class="tg-0lax"><span style="color:#494949">57</span></td>
+    <td class="tg-0lax"><span style="color:#494949">11</span></td>
+    <td class="tg-0lax"><span style="color:#494949">14</span></td>
+    <td class="tg-0lax"><span style="color:#494949">3</span></td>
+    <td class="tg-0lax"><span style="color:#494949">0</span></td>
+    <td class="tg-0lax"><span style="color:#494949">3</span></td>
+    <td class="tg-0lax"><span style="color:#494949">15</span></td>
+    <td class="tg-0lax"><span style="color:#494949">26</span></td>
+    <td class="tg-0lax"><span style="color:#494949">.456</span></td>
+    <td class="tg-0lax"><span style="color:#494949">11</span></td>
+    <td class="tg-0lax"><span style="color:#494949">5</span></td>
+    <td class="tg-0lax"><span style="color:#494949">16</span></td>
+    <td class="tg-0lax"><span style="color:#494949">1</span></td>
+    <td class="tg-0lax"><span style="color:#494949">.411</span></td>
+    <td class="tg-0lax"><span style="color:#494949">0</span></td>
+    <td class="tg-0lax"><span style="color:#494949">0</span></td>
+    <td class="tg-0lax"><span style="color:#494949">0-2</span></td>
+  </tr>
+  <tr>
+    <td class="tg-0lax"><span style="color:#494949">1</span></td>
+    <td class="tg-0lax"><span style="font-weight:bold;text-decoration:underline;color:#171718">O'Donnell, Micah</span></td>
+    <td class="tg-0lax"><span style="color:#494949">.205</span></td>
+    <td class="tg-0lax"><span style="color:#494949">.682</span></td>
+    <td class="tg-0lax"><span style="color:#494949">32-18</span></td>
+    <td class="tg-0lax"><span style="color:#494949">73</span></td>
+    <td class="tg-0lax"><span style="color:#494949">13</span></td>
+    <td class="tg-0lax"><span style="color:#494949">15</span></td>
+    <td class="tg-0lax"><span style="color:#494949">5</span></td>
+    <td class="tg-0lax"><span style="color:#494949">0</span></td>
+    <td class="tg-0lax"><span style="color:#494949">2</span></td>
+    <td class="tg-0lax"><span style="color:#494949">14</span></td>
+    <td class="tg-0lax"><span style="color:#494949">26</span></td>
+    <td class="tg-0lax"><span style="color:#494949">.356</span></td>
+    <td class="tg-0lax"><span style="color:#494949">10</span></td>
+    <td class="tg-0lax"><span style="color:#494949">3</span></td>
+    <td class="tg-0lax"><span style="color:#494949">18</span></td>
+    <td class="tg-0lax"><span style="color:#494949">0</span></td>
+    <td class="tg-0lax"><span style="color:#494949">.326</span></td>
+    <td class="tg-0lax"><span style="color:#494949">0</span></td>
+    <td class="tg-0lax"><span style="color:#494949">2</span></td>
+    <td class="tg-0lax"><span style="color:#494949">1-1</span></td>
+  </tr>
+  <tr>
+    <td class="tg-0lax"><span style="color:#494949">0</span></td>
+    <td class="tg-0lax"><span style="font-weight:bold;text-decoration:underline;color:#171718">Gray, AJ</span></td>
+    <td class="tg-0lax"><span style="color:#494949">.143</span></td>
+    <td class="tg-0lax"><span style="color:#494949">.669</span></td>
+    <td class="tg-0lax"><span style="color:#494949">14-2</span></td>
+    <td class="tg-0lax"><span style="color:#494949">14</span></td>
+    <td class="tg-0lax"><span style="color:#494949">4</span></td>
+    <td class="tg-0lax"><span style="color:#494949">2</span></td>
+    <td class="tg-0lax"><span style="color:#494949">1</span></td>
+    <td class="tg-0lax"><span style="color:#494949">0</span></td>
+    <td class="tg-0lax"><span style="color:#494949">0</span></td>
+    <td class="tg-0lax"><span style="color:#494949">7</span></td>
+    <td class="tg-0lax"><span style="color:#494949">3</span></td>
+    <td class="tg-0lax"><span style="color:#494949">.214</span></td>
+    <td class="tg-0lax"><span style="color:#494949">5</span></td>
+    <td class="tg-0lax"><span style="color:#494949">3</span></td>
+    <td class="tg-0lax"><span style="color:#494949">4</span></td>
+    <td class="tg-0lax"><span style="color:#494949">0</span></td>
+    <td class="tg-0lax"><span style="color:#494949">.455</span></td>
+    <td class="tg-0lax"><span style="color:#494949">0</span></td>
+    <td class="tg-0lax"><span style="color:#494949">0</span></td>
+    <td class="tg-0lax"><span style="color:#494949">0-1</span></td>
+  </tr>
+  <tr>
+    <td class="tg-0lax"><span style="color:#494949">13</span></td>
+    <td class="tg-0lax"><span style="font-weight:bold;text-decoration:underline;color:#171718">Swinehart, Dalton</span></td>
+    <td class="tg-0lax"><span style="color:#494949">.118</span></td>
+    <td class="tg-0lax"><span style="color:#494949">.562</span></td>
+    <td class="tg-0lax"><span style="color:#494949">18-14</span></td>
+    <td class="tg-0lax"><span style="color:#494949">17</span></td>
+    <td class="tg-0lax"><span style="color:#494949">5</span></td>
+    <td class="tg-0lax"><span style="color:#494949">2</span></td>
+    <td class="tg-0lax"><span style="color:#494949">0</span></td>
+    <td class="tg-0lax"><span style="color:#494949">0</span></td>
+    <td class="tg-0lax"><span style="color:#494949">0</span></td>
+    <td class="tg-0lax"><span style="color:#494949">1</span></td>
+    <td class="tg-0lax"><span style="color:#494949">2</span></td>
+    <td class="tg-0lax"><span style="color:#494949">.118</span></td>
+    <td class="tg-0lax"><span style="color:#494949">10</span></td>
+    <td class="tg-0lax"><span style="color:#494949">0</span></td>
+    <td class="tg-0lax"><span style="color:#494949">6</span></td>
+    <td class="tg-0lax"><span style="color:#494949">1</span></td>
+    <td class="tg-0lax"><span style="color:#494949">.444</span></td>
+    <td class="tg-0lax"><span style="color:#494949">0</span></td>
+    <td class="tg-0lax"><span style="color:#494949">0</span></td>
+    <td class="tg-0lax"><span style="color:#494949">0-0</span></td>
+  </tr>
+  <tr>
+    <td class="tg-0lax"><span style="color:#494949">27</span></td>
+    <td class="tg-0lax"><span style="font-weight:bold;text-decoration:underline;color:#171718">Spencer, Jacob</span></td>
+    <td class="tg-0lax"><span style="color:#494949">.000</span></td>
+    <td class="tg-0lax"><span style="color:#494949">.000</span></td>
+    <td class="tg-0lax"><span style="color:#494949">6-3</span></td>
+    <td class="tg-0lax"><span style="color:#494949">1</span></td>
+    <td class="tg-0lax"><span style="color:#494949">0</span></td>
+    <td class="tg-0lax"><span style="color:#494949">0</span></td>
+    <td class="tg-0lax"><span style="color:#494949">0</span></td>
+    <td class="tg-0lax"><span style="color:#494949">0</span></td>
+    <td class="tg-0lax"><span style="color:#494949">0</span></td>
+    <td class="tg-0lax"><span style="color:#494949">0</span></td>
+    <td class="tg-0lax"><span style="color:#494949">0</span></td>
+    <td class="tg-0lax"><span style="color:#494949">.000</span></td>
+    <td class="tg-0lax"><span style="color:#494949">0</span></td>
+    <td class="tg-0lax"><span style="color:#494949">0</span></td>
+    <td class="tg-0lax"><span style="color:#494949">0</span></td>
+    <td class="tg-0lax"><span style="color:#494949">0</span></td>
+    <td class="tg-0lax"><span style="color:#494949">.000</span></td>
+    <td class="tg-0lax"><span style="color:#494949">0</span></td>
+    <td class="tg-0lax"><span style="color:#494949">0</span></td>
+    <td class="tg-0lax"><span style="color:#494949">0-0</span></td>
+  </tr>
+  <tr>
+    <td class="tg-0lax"><span style="color:#494949">39</span></td>
+    <td class="tg-0lax"><span style="font-weight:bold;text-decoration:underline;color:#171718">Oliger, Michael</span></td>
+    <td class="tg-0lax"><span style="color:#494949">.000</span></td>
+    <td class="tg-0lax"><span style="color:#494949">.000</span></td>
+    <td class="tg-0lax"><span style="color:#494949">1-0</span></td>
+    <td class="tg-0lax"><span style="color:#494949">1</span></td>
+    <td class="tg-0lax"><span style="color:#494949">0</span></td>
+    <td class="tg-0lax"><span style="color:#494949">0</span></td>
+    <td class="tg-0lax"><span style="color:#494949">0</span></td>
+    <td class="tg-0lax"><span style="color:#494949">0</span></td>
+    <td class="tg-0lax"><span style="color:#494949">0</span></td>
+    <td class="tg-0lax"><span style="color:#494949">0</span></td>
+    <td class="tg-0lax"><span style="color:#494949">0</span></td>
+    <td class="tg-0lax"><span style="color:#494949">.000</span></td>
+    <td class="tg-0lax"><span style="color:#494949">0</span></td>
+    <td class="tg-0lax"><span style="color:#494949">0</span></td>
+    <td class="tg-0lax"><span style="color:#494949">1</span></td>
+    <td class="tg-0lax"><span style="color:#494949">0</span></td>
+    <td class="tg-0lax"><span style="color:#494949">.000</span></td>
+    <td class="tg-0lax"><span style="color:#494949">0</span></td>
+    <td class="tg-0lax"><span style="color:#494949">0</span></td>
+    <td class="tg-0lax"><span style="color:#494949">0-0</span></td>
+  </tr>
+  <tr>
+    <td class="tg-0lax"><span style="color:#494949">29</span></td>
+    <td class="tg-0lax"><span style="font-weight:bold;text-decoration:underline;color:#171718">McKim, Nolan</span></td>
+    <td class="tg-0lax"><span style="color:#494949">.000</span></td>
+    <td class="tg-0lax"><span style="color:#494949">.000</span></td>
+    <td class="tg-0lax"><span style="color:#494949">2-0</span></td>
+    <td class="tg-0lax"><span style="color:#494949">0</span></td>
+    <td class="tg-0lax"><span style="color:#494949">1</span></td>
+    <td class="tg-0lax"><span style="color:#494949">0</span></td>
+    <td class="tg-0lax"><span style="color:#494949">0</span></td>
+    <td class="tg-0lax"><span style="color:#494949">0</span></td>
+    <td class="tg-0lax"><span style="color:#494949">0</span></td>
+    <td class="tg-0lax"><span style="color:#494949">0</span></td>
+    <td class="tg-0lax"><span style="color:#494949">0</span></td>
+    <td class="tg-0lax"><span style="color:#494949">.000</span></td>
+    <td class="tg-0lax"><span style="color:#494949">0</span></td>
+    <td class="tg-0lax"><span style="color:#494949">0</span></td>
+    <td class="tg-0lax"><span style="color:#494949">0</span></td>
+    <td class="tg-0lax"><span style="color:#494949">0</span></td>
+    <td class="tg-0lax"><span style="color:#494949">.000</span></td>
+    <td class="tg-0lax"><span style="color:#494949">0</span></td>
+    <td class="tg-0lax"><span style="color:#494949">0</span></td>
+    <td class="tg-0lax"><span style="color:#494949">0-0</span></td>
+  </tr>
+  <tr>
+    <td class="tg-0lax"></td>
+    <td class="tg-0lax"><span style="font-weight:bold;color:#494949">Totals</span></td>
+    <td class="tg-0lax"><span style="font-weight:bold;color:#494949">.306</span></td>
+    <td class="tg-0lax"><span style="font-weight:bold;color:#494949">.885</span></td>
+    <td class="tg-0lax"><span style="font-weight:bold;color:#494949">51-51</span></td>
+    <td class="tg-0lax"><span style="font-weight:bold;color:#494949">1566</span></td>
+    <td class="tg-0lax"><span style="font-weight:bold;color:#494949">378</span></td>
+    <td class="tg-0lax"><span style="font-weight:bold;color:#494949">479</span></td>
+    <td class="tg-0lax"><span style="font-weight:bold;color:#494949">110</span></td>
+    <td class="tg-0lax"><span style="font-weight:bold;color:#494949">17</span></td>
+    <td class="tg-0lax"><span style="font-weight:bold;color:#494949">40</span></td>
+    <td class="tg-0lax"><span style="font-weight:bold;color:#494949">323</span></td>
+    <td class="tg-0lax"><span style="font-weight:bold;color:#494949">743</span></td>
+    <td class="tg-0lax"><span style="font-weight:bold;color:#494949">.474</span></td>
+    <td class="tg-0lax"><span style="font-weight:bold;color:#494949">210</span></td>
+    <td class="tg-0lax"><span style="font-weight:bold;color:#494949">82</span></td>
+    <td class="tg-0lax"><span style="font-weight:bold;color:#494949">351</span></td>
+    <td class="tg-0lax"><span style="font-weight:bold;color:#494949">19</span></td>
+    <td class="tg-0lax"><span style="font-weight:bold;color:#494949">.411</span></td>
+    <td class="tg-0lax"><span style="font-weight:bold;color:#494949">20</span></td>
+    <td class="tg-0lax"><span style="font-weight:bold;color:#494949">41</span></td>
+    <td class="tg-0lax"><span style="font-weight:bold;color:#494949">56-78</span></td>
+  </tr>
+  <tr>
+    <td class="tg-0lax"></td>
+    <td class="tg-0lax"><span style="font-weight:bold;color:#494949">Opponents</span></td>
+    <td class="tg-0lax"><span style="font-weight:bold;color:#494949">.264</span></td>
+    <td class="tg-0lax"><span style="font-weight:bold;color:#494949">.780</span></td>
+    <td class="tg-0lax"><span style="font-weight:bold;color:#494949">51-51</span></td>
+    <td class="tg-0lax"><span style="font-weight:bold;color:#494949">1485</span></td>
+    <td class="tg-0lax"><span style="font-weight:bold;color:#494949">256</span></td>
+    <td class="tg-0lax"><span style="font-weight:bold;color:#494949">392</span></td>
+    <td class="tg-0lax"><span style="font-weight:bold;color:#494949">76</span></td>
+    <td class="tg-0lax"><span style="font-weight:bold;color:#494949">8</span></td>
+    <td class="tg-0lax"><span style="font-weight:bold;color:#494949">50</span></td>
+    <td class="tg-0lax"><span style="font-weight:bold;color:#494949">233</span></td>
+    <td class="tg-0lax"><span style="font-weight:bold;color:#494949">634</span></td>
+    <td class="tg-0lax"><span style="font-weight:bold;color:#494949">.427</span></td>
+    <td class="tg-0lax"><span style="font-weight:bold;color:#494949">175</span></td>
+    <td class="tg-0lax"><span style="font-weight:bold;color:#494949">36</span></td>
+    <td class="tg-0lax"><span style="font-weight:bold;color:#494949">406</span></td>
+    <td class="tg-0lax"><span style="font-weight:bold;color:#494949">9</span></td>
+    <td class="tg-0lax"><span style="font-weight:bold;color:#494949">.353</span></td>
+    <td class="tg-0lax"><span style="font-weight:bold;color:#494949">11</span></td>
+    <td class="tg-0lax"><span style="font-weight:bold;color:#494949">16</span></td>
+    <td class="tg-0lax"><span style="font-weight:bold;color:#494949">62-80</span></td>
+  </tr>
+</tbody>
+</table>
+</center>
+
+<br>
+<br>
+
+</div>
