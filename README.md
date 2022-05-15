@@ -46,7 +46,7 @@ This repository includes information on my Azure ASP.NET web app with SQL Databa
 - I was then able to use the Azure portal to help in automation by deploying my app through Github Actions. I achieved this by going through the Deployment Center in the Azure Portal to find the automation option of Github. It then proceeded to create a Github Action workflow with code to deploy my project on push in the master branch.
 - Currently, I am troubleshooting a runtime time when deploying the project automatically. I have done extensive research on the cause of my error message and have tried multiple solutions with no success. I believe it is a .Net Framework issue of compatibility. It seems to be a common issue with little to no standardized solutions. I will continue to troubleshoot this problem in order to achieve automation fully. I plan on doing some more research and using a trial and error method like I have been doing.
 - Nonetheless, all the code I have used for Virtual Studio and my resource group's JSON file is under the master branch for your consideration.
-![CC 10](https://user-images.githubusercontent.com/103961256/168484884-e4833534-31aa-4834-8ed9-dafd30e56e2a.PNG)
+![CC 10](https://user-images.githubusercontent.com/103961256/168485036-8600962a-3f6a-4dbd-ac8c-9403b592d15d.PNG)
 - ^ Error message from Github Actions Logs.
 #### Possible Problems Needed to Investigate Further (from conducting research):
 - Attempting to build a .Net 6.0 project on a container that doesn't have .Net 6.0 SDK installed, or on a container where global.json was used to switch to the .Net Core 3 SDK. If this is it, I need to implement .Net 6.0 SDK across all platforms for standardized and seamless transition
