@@ -7,7 +7,7 @@ This repository includes information on my Azure ASP.NET web app with SQL Databa
 - The "Hitting" statistics page shows all of the hitters' statistics in the 2022 season by using an ASP.NET web app. The "Pitching" statistics page shows all of the pitchers' statistics in the 2022 season through a back-end SQL Database that is linked to the front-end ASP.NET web app. 
 - For the SQL Database, I planned on manually inputting pitchers' data into the SQL database of each pitcher on the team, while still being able to add new pitchers, edit, and delete rows using the front-end web application as updated statistics become available for pitchers (as I am a pitcher as well). 
 ![ITBaseball - Hitting](https://user-images.githubusercontent.com/103961256/168485467-a294e482-b6e4-48c1-b7ee-30e082000411.PNG)
-
+![ITBaseball - Pitching](https://user-images.githubusercontent.com/103961256/168485491-bbddc43d-6bda-4697-95c1-8531fbd5844f.PNG)
 
 ## Diagram
  - I used Microsoft Visio for a visual representation of this project to show how everything is connected to each other in my resource group. 
