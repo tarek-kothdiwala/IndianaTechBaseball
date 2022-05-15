@@ -50,7 +50,6 @@ This repository includes information on my Azure ASP.NET web app with SQL Databa
 - Attempting to build a .Net 6.0 project on a container that doesn't have .Net 6.0 SDK installed, or on a container where global.json was used to switch to the .Net Core 3 SDK. If this is it, I need to implement .Net 6.0 SDK across all platforms for standardized and seamless transition
 - Minimum version required for the SDK version is not up to par. Need to implement to a higher version. 
 - Use the preview release for visual studio 16.8.0 Preview 3.0. to get past this issue
-- 
 ## Future Revisions
  - For future revisions, I would add functionality to the add pitcher, edit, and delete buttons and brush up on my HTML codding experience by being able to have the public user-editable and writable data from the SQL database within the web app. If I had more time, I would have experimented with this and did additional research on how to make this work in order to update the back-end SQL database using the front-end web app as originally envisioned. 
  - I would also like to make it more aesthetically appealing by adding logos, sponsors, ads, etc., into the web page and not just have it entirely a functional web page but more appealing and enjoyable to view for the user. 
