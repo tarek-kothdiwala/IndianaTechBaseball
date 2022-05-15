@@ -46,6 +46,11 @@ This repository includes information on my Azure ASP.NET web app with SQL Databa
 - I was then able to use the Azure portal to help in automation by deploying my app through Github Actions. I achieved this by going through the Deployment Center in the Azure Portal to find the automation option of Github. It then proceeded to create a Github Action workflow with code to deploy my project on push in the master branch.
 - Currently, I am troubleshooting a runtime time when deploying the project automatically. I have done extensive research on the cause of my error message and have tried multiple solutions with no success. I believe it is a .Net Framework issue of compatibility. It seems to be a common issue with little to no standardized solutions. I will continue to troubleshoot this problem in order to achieve automation fully. I plan on doing some more research and using a trial and error method like I have been doing.
 - Nonetheless, all the code I have used for Virtual Studio and my resource group's JSON file is under the master branch for your consideration.
+#### Possible Problems Needed to Investigate Further (from conducting research):
+- Attempting to build a .Net 6.0 project on a container that doesn't have .Net 6.0 SDK installed, or on a container where global.json was used to switch to the .Net Core 3 SDK. If this is it, I need to implement .Net 6.0 SDK across all platforms for standardized and seamless transition
+- Minimum version required for the SDK version is not up to par. Need to implement to a higher version. 
+- Use the preview release for visual studio 16.8.0 Preview 3.0. to get past this issue
+- 
 ## Future Revisions
  - For future revisions, I would add functionality to the add pitcher, edit, and delete buttons and brush up on my HTML codding experience by being able to have the public user-editable and writable data from the SQL database within the web app. If I had more time, I would have experimented with this and did additional research on how to make this work in order to update the back-end SQL database using the front-end web app as originally envisioned. 
  - I would also like to make it more aesthetically appealing by adding logos, sponsors, ads, etc., into the web page and not just have it entirely a functional web page but more appealing and enjoyable to view for the user. 
