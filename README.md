@@ -4,7 +4,7 @@ This repository includes information on my Azure ASP.NET web app with SQL Databa
 ## Project Overview
 
 - This project for Cloud Computing is using a two-tier model. It is compromised of a front-end ASP.NET web app with a back-end SQL Database portion. It displays statistics for the Indiana Tech Warriors 2022 baseball season, of which I am a part of and passionate about. 
-- The "Hitting" statistics page shows all of the hitters' statistics in the 2022 season by using an ASP.NET web app. The "Pitching" statistics page shows all of the pitchers' statisitcs in the 2022 season through a back-end SQL Database that is linked to the front-end ASP.NET web app. 
+- The "Hitting" statistics page shows all of the hitters' statistics in the 2022 season by using an ASP.NET web app. The "Pitching" statistics page shows all of the pitchers' statistics in the 2022 season through a back-end SQL Database that is linked to the front-end ASP.NET web app. 
 - For the SQL Database, I planned on manually inputting pitchers' data into the SQL database of each pitcher on the team, while still being able to add new pitchers, edit, and delete rows using the front-end web application as updated statistics become available for pitchers (as I am a pitcher as well). 
 
 ## Diagram
@@ -15,7 +15,7 @@ This repository includes information on my Azure ASP.NET web app with SQL Databa
 ## Services
 #### Azure Web App Service
  - Why: I Used an app service for its ease of use in hosting my website that is publicly accessible. It is able to manage multiple different frameworks and different programming languages (used mainly HTML and C# for mine). 
- - Purpose: The purpose for my app service was to be able to allow anyone to access the Indiana Tech 2022 Baseball statistics easily in a very user friendly way, and the app service, with its built-in frameworks, allowed for ease of publishing to the web what I intended. 
+ - Purpose: The purpose for my app service was to be able to allow anyone to access the Indiana Tech 2022 Baseball statistics easily in a very user-friendly way, and the app service, with its built-in frameworks, allowed for ease of publishing to the web, what I intended. 
 #### Azure App Service Plan
  - Why: The app service plan is created for the web app to run since it defines computer resources for it.
  - Purpose: The purpose of the app service plan is to define the operating system, region, pricing tier, etc. Basically, the app service plan determines my features of my app service and how much to pay for those features I have chosen. 
@@ -51,8 +51,8 @@ This repository includes information on my Azure ASP.NET web app with SQL Databa
  - I would also like to make it more aesthetically appealing by adding logos, sponsors, ads, etc., into the web page and not just have it entirely a functional web page but more appealing and enjoyable to view for the user. 
  - Additionally, to make the website more complete in nature, I would add a schedule that would also link to a SQL database with the entire season schedule with the ability to edit scores and results of games. 
  - I should add the logging feature to my azure services to collect and analyze performance based data from the services I am running. It will help me track the performance efficiency and availability of my cloud resources. 
- - I should also add the monitoring feature to my project to collect,analze and act on my evironment. This will help me better aid in application performance as well as identifying issues as they happen and get to the root of the problem as soon as possible. This can also be paired with alerts to be notified in the event something happens and/or parameters set by the administrator.
- - Laslty, I should add backup feature to my services. This will ensure that the data can be recovered if the servcie happens to crash so data is not lost. I would have it configured on a schedule where it backs up every seven days and deletes the previous backup when a new one is stored. 
+ - I should also add the monitoring feature to my project to collect, analyze, and act on my environment. This will help me better aid in application performance as well as identifying issues as they happen and get to the root of the problem as soon as possible. This can also be paired with alerts to be notified in the event something happens and/or parameters set by the administrator.
+ - Laslty, I should add backup feature to my services. This will ensure that the data can be recovered if the service happens to crash so data is not lost. I would have it configured on a schedule where it backs up every seven days and deletes the previous backup when a new one is stored. 
 - Looking back at things, since I am using a rather simple SQL query pull, I should use table storage to keep my costs and overhead lower compared to what it is now. It would take much less compute/storage power to produce the same fields. 
 ## Summary & Takeaways
 - Lastly, I am very proud of myself for completing this project. I feel like I gave it my all and used my resources very effectively, and learned a lot along the way. I had never used many cloud-based services before, and seeing how everything works from a configuration/back-end perspective was definitely great exposure! I do recommend this class to all Computer Science (or related field program) undergrads as there is a lot to learn with the way the world of technology is headed to a more cloud-based model.
